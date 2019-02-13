@@ -1,0 +1,18 @@
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+
+CREATE TABLE events (
+  eventId int(5) NOT NULL AUTO_INCREMENT,
+  eventTitle varchar(255),
+  organizer varchar(255),
+  venue varchar(255),
+  description varchar(255),
+  seatCapacity int,
+  ticketPrice int,
+  startDate date,
+  endDate date,
+  startTime time,
+  endTime time,
+  userId int(5),
+  PRIMARY KEY (eventId),
+  FOREIGN KEY (userId) REFERENCES users (userId)
+)

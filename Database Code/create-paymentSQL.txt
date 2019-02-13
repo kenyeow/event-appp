@@ -1,0 +1,6 @@
+CREATE TABLE payment(
+  payment_id int(5) NOT NULL AUTO_INCREMENT,
+  amount int,
+  PRIMARY KEY (payment_id)
+  
+)

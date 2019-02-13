@@ -1,0 +1,11 @@
+CREATE TABLE ticket_order(
+  ticker_order_id int(5) NOT NULL AUTO_INCREMENT,
+  eventId int,
+  total_ticket int,
+  userId int,
+  payment_id int,
+  PRIMARY KEY (ticker_order_id),
+  FOREIGN KEY (userId) REFERENCES users(userId),
+  FOREIGN KEY (eventId)REFERENCES events(eventId),
+  FOREIGN KEY (payment_id) REFERENCES payment(payment_id)
+)
